@@ -1,4 +1,4 @@
-package code.infra.framework.spring;
+package code.infra.framework.spring.beans;
 
 import javax.sql.DataSource;
 
