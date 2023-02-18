@@ -10,10 +10,12 @@ public class User {
     private UUID id;
     private String username;
     private String email;
+    private Status status;
     private String password;
 
     public User() {
         this.id = UUID.randomUUID();
+        this.status = Status.ACTIVE;
     }
 
     public User(String username, String email, String password) {
@@ -52,6 +54,22 @@ public class User {
 
     public String password() {
         return password;
+    }
+
+    public void activate() {
+        this.status = Status.ACTIVE;
+    }
+
+    public void inactivate() {
+        this.status = Status.INACTIVE;
+    }
+
+    public boolean isActive() {
+        return this.status == Status.ACTIVE;
+    }
+
+    public boolean isInactive() {
+        return this.status == Status.INACTIVE;
     }
 
     @Override
