@@ -14,7 +14,8 @@ public record FindAllUser(IUserRepository userRepository) {
             return new OutFindUser(
                 user.id().toString(), 
                 user.username(), 
-                user.email(), 
+                user.email(),
+                user.status().toString(), 
                 user.password());
             }
         ).toList();
