@@ -14,6 +14,7 @@ public record FindUserById (IUserRepository userRepository) {
                 user.id().toString(),
                 user.username(),
                 user.email(),
+                user.status().toString(),
                 user.password()
         )).orElse(null);
     }
