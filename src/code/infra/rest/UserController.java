@@ -4,6 +4,7 @@ import java.util.Collection;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,31 +44,56 @@ public class UserController implements IController<InRequestUser, OutResponseUse
     }
 
     @GetMapping("/{id}")
-    @Override
-    public OutResponseUser findById(@PathVariable(name = "id") String id) {
+    public OutResponseUser findById(@PathVariable(name = "id") String id,
+            @RequestParam(name = "status") String status) {
+
         OutFindUserById userFound = findUserById.execute(id);
-        return new OutResponseUser(userFound.id(), userFound.username(), userFound.email());
+        return new OutResponseUser(
+            userFound.id(), 
+            userFound.username(), 
+            userFound.email(),
+            userFound.status()
+        );
+    }
+
+    @PutMapping("/{id}")
+    public OutResponseUser updateStatus(@PathVariable(name = "id") String id,
+            @RequestParam(name = "status") String status) {
+
+        if (status.equals("active")) {
+            activateUserById.execute(id);
+        } else if (status.equals("inactive")) {
+            inactivateUserById.execute(id);
+        }
+
+        OutFindUserById userFound = findUserById.execute(id);
+        return new OutResponseUser(
+            userFound.id(), 
+            userFound.username(), 
+            userFound.email(),
+            userFound.status()
+        );
     }
 
     @GetMapping
     public Collection<OutResponseUser> findAll(
-        @RequestParam(name = "email") String email,
-        @RequestParam(name = "username") String username) {
-        if(email != null) {
+            @RequestParam(name = "email") String email,
+            @RequestParam(name = "username") String username) {
+        if (email != null) {
             Collection<OutFindUserByEmail> users = findAllUsersByEmail.execute(email);
             return users.stream()
-                    .map(user -> new OutResponseUser(user.id(), user.username(), user.email()))
+                    .map(user -> new OutResponseUser(user.id(), user.username(), user.email(), user.status()))
                     .toList();
-        } else if(username != null) {
+        } else if (username != null) {
             Collection<OutFindUserByUsername> users = findAllUsersByUsername.execute(username);
             return users.stream()
-                    .map(user -> new OutResponseUser(user.id(), user.username(), user.email()))
+                    .map(user -> new OutResponseUser(user.id(), user.username(), user.email(), user.status()))
                     .toList();
         }
 
         Collection<OutFindUser> users = findAllUser.execute();
         return users.stream()
-                .map(user -> new OutResponseUser(user.id(), user.username(), user.email()))
+                .map(user -> new OutResponseUser(user.id(), user.username(), user.email(), user.status()))
                 .toList();
     }
 
@@ -83,7 +109,6 @@ public class UserController implements IController<InRequestUser, OutResponseUse
         return null;
     }
 
-    @Override
     public void delete(String id) {
         // TODO Auto-generated method stub
 
