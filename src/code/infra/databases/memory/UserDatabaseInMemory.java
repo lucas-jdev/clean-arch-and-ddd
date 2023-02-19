@@ -19,6 +19,17 @@ public class UserDatabaseInMemory implements IUserRepository {
     }
 
     @Override
+    public void update(User user) {
+        Optional<User> userOptional = users.stream()
+                .filter(u -> u.id().equals(user.id()))
+                .findFirst();
+
+        userOptional.ifPresent(users::remove);
+        userOptional.ifPresent(users::add);
+        userOptional.orElseThrow();
+    }
+
+    @Override
     public Collection<User> findAll() {
         return users;
     }
