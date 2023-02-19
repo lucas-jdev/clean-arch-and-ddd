@@ -9,6 +9,8 @@ public interface IUserRepository {
 
     void save(User user);
 
+    void update(User user);
+
     Collection<User> findAll();
 
     Collection<User> findByEmail(String email);
