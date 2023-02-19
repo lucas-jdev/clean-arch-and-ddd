@@ -2,6 +2,8 @@ package code.domain.entities.user;
 
 import java.util.UUID;
 
+import code.util.exceptions.domain.ParameterNotValidException;
+
 /**
  * User
  */
@@ -33,10 +35,16 @@ public class User {
     }
 
     public void changePassword(String newPassword) {
+        if (newPassword == null || newPassword.isBlank()) {
+            throw new ParameterNotValidException("Password cannot be null or empty");
+        }
         this.password = newPassword;
     }
 
     public void changeEmail(String newEmail) {
+        if (newEmail == null || newEmail.isBlank()) {
+            throw new ParameterNotValidException("Email cannot be null or empty");
+        }
         this.email = newEmail;
     }
 
@@ -54,6 +62,10 @@ public class User {
 
     public String password() {
         return password;
+    }
+
+    public Status status() {
+        return status;
     }
 
     public void activate() {
