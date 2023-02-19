@@ -18,18 +18,24 @@ import code.application.use_cases.user.read.user.FindAllUser;
 import code.application.use_cases.user.read.user.FindAllUsersByEmail;
 import code.application.use_cases.user.read.user.FindAllUsersByUsername;
 import code.application.use_cases.user.read.user.FindUserById;
+import code.application.use_cases.user.update.ActivateUserById;
+import code.application.use_cases.user.update.InactivateUserById;
 import code.domain.repositories.IUserRepository;
 
 @RestController
 @RequestMapping("/users")
 public class UserController implements IController<InRequestUser, OutResponseUser> {
 
+    private ActivateUserById activateUserById;
+    private InactivateUserById inactivateUserById;
     private FindUserById findUserById;
     private FindAllUsersByEmail findAllUsersByEmail;
     private FindAllUsersByUsername findAllUsersByUsername;
     private FindAllUser findAllUser;
 
     public UserController(IUserRepository userRepository) {
+        this.activateUserById = new ActivateUserById(userRepository);
+        this.inactivateUserById = new InactivateUserById(userRepository);
         this.findUserById = new FindUserById(userRepository);
         this.findAllUsersByEmail = new FindAllUsersByEmail(userRepository);
         this.findAllUsersByUsername = new FindAllUsersByUsername(userRepository);
