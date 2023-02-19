@@ -25,20 +25,37 @@ public class UserDatabase implements IUserRepository {
         Object[] data = {
                 user.username(),
                 user.email(),
-                user.password()
+                user.password(),
+                user.status()
         };
 
         connection.insert("""
-                INSERT INTO users (username, email, password)
-                VALUES (?, ?, ?)
+                INSERT INTO users (username, email, password, user_status)
+                VALUES (?, ?, ?, ?)
                 """, data);
 
     }
 
     @Override
+    public void update(User user) {
+        Object[] data = {
+                user.username(),
+                user.email(),
+                user.password(),
+                user.status(),
+                user.id()
+        };
+
+        connection.insert("""
+                UPDATE users SET username = ?, email = ?, password = ?, user_status = ?
+                WHERE id = ?
+                """, data);
+    }
+
+    @Override
     public Collection<User> findAll() {
         ResultSet rs = connection.query("""
-                SELECT * FROM users
+                SELECT * FROM users WHERE user_status = 'ACTIVE'
                 """);
         return _mapToUsers(rs);
     }
@@ -51,14 +68,7 @@ public class UserDatabase implements IUserRepository {
                 SELECT * FROM users WHERE email LIKE ?
                 """, emailWithJokerCharacter);
 
-        Collection<User> users = new HashSet<>();
-        try {
-            users = _mapToUsers(rs);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return users;
+       return _mapToUsers(rs);
     }
 
     @Override
@@ -69,15 +79,7 @@ public class UserDatabase implements IUserRepository {
                 SELECT * FROM users WHERE username LIKE ?
                 """, usernameWithJokerCharacter);
 
-        Collection<User> users = new HashSet<>();
-        try {
-            users = _mapToUsers(rs);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return users;
-
+        return _mapToUsers(rs);
     }
 
     @Override
