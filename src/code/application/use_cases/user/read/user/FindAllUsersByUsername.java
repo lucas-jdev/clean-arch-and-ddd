@@ -16,6 +16,7 @@ public record FindAllUsersByUsername (IUserRepository userRepository){
                         user.id().toString(), 
                         user.username(), 
                         user.email(), 
+                        user.status().toString(),
                         user.password()
                     );
                 })
