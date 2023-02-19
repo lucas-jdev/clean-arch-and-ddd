@@ -6,7 +6,7 @@ This project is a study of clean architecture, with the objective of learning an
 
 ## Technologies
 
-<div style="text-align:center">
+<div align="center">
     <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/>
     <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"/>
     <img src="https://img.shields.io/badge/Quarkus-FF5722?style=for-the-badge&logo=quarkus&logoColor=white"/>
@@ -55,7 +55,7 @@ finished, the project is running 😁.
 
 The project is divided into 3 layers, the `domain`, `application` and `infra` layers. The `domain` layer is responsible for the business rules, the `application` layer is responsible for the application rules and the `infra` layer is responsible for the infrastructure rules.
 
-<div style="text-align:center">
+<div align="center">
 
 ![Architecture](/arch.png)
 
