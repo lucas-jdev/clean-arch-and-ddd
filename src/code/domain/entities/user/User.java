@@ -1,7 +1,6 @@
 package code.domain.entities.user;
 
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
 
@@ -9,9 +8,6 @@ import code.domain.entities.IEntity;
 
 import code.util.exceptions.domain.ParameterNotValidException;
 
-/**
- * User
- */
 public class User implements IEntity<UUID>{
 
     private UUID id;
