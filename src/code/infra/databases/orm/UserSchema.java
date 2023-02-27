@@ -9,7 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
 @Entity
-public class UserEntity {
+public class UserSchema {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,10 +21,10 @@ public class UserEntity {
     private String email;
     private String password;
 
-    public UserEntity() {
+    public UserSchema() {
     }
 
-    public UserEntity(UUID id, String username, String email, String password) {
+    public UserSchema(UUID id, String username, String email, String password) {
         this.id = id;
         this.username = username;
         this.email = email;
