@@ -11,7 +11,7 @@ import code.infra.databases.jdbc.postgreSQL.UserDatabase;
 public class IUserRepositoryBean {
 
     @Bean
-    public IUserRepository userRepository(IConnection connection) {
+    IUserRepository userRepository(IConnection connection) {
         return new UserDatabase(connection);
     }
     
