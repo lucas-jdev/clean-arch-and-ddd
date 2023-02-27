@@ -38,3 +38,72 @@ public class Main {
     }
 
 }
+
+/**
+ * @package code
+ * @brief Package containing project structure.
+ */
+
+/**
+ * @package code.application
+ * @brief Package containing all application related classes.
+ */
+
+/**
+ * @package code.domain
+ * @brief Package containing all domain related classes.
+ */
+
+/**
+ * @package code.infra
+ * @brief Package containing all infrastructure related classes.
+ */
+
+//  ==============================================================
+
+/**
+ * @package code.domain.entities
+ * @brief Package containing all entities.
+ */
+
+ /**
+ * @package code.domain.repositories
+ * @brief Package containing all repositories.
+ */
+
+/**
+ * @package code.application.use_cases
+ * @brief Package containing all use cases.
+ */
+
+/**
+ * @package code.application.dtos
+ * @brief Package containing all data transfer objects.
+ */
+
+/**
+ * @package code.infra.databases
+ * @brief Package containing all database related classes.
+ */
+
+/**
+ * @package code.infra.rest
+ * @brief Package containing all controllers.
+ */
+
+/**
+ * @package code.infra.env
+ * @brief Package containing all environment related classes.
+ */
+
+/**
+ * @package code.infra.framework
+ * @brief Package containing all framework related classes.
+ */
+
+/**
+ * @package code.util
+ * @brief Package containing all utility classes.
+ */
+
+
