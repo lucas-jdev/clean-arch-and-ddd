@@ -10,7 +10,7 @@ import code.infra.databases.jdbc.postgreSQL.PostgreSQLConnection;
 public class IConnectionBean {
 
     @Bean
-    public IConnection connection() {
+    IConnection connection() {
         return new PostgreSQLConnection();
     }
 
