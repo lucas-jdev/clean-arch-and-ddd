@@ -1,3 +1,5 @@
 .vscode
 target
 props.env
+doxygen-awesome-css
+doc
