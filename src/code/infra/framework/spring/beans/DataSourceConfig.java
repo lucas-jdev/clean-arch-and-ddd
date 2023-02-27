@@ -6,16 +6,18 @@ import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import code.infra.env.EnvironmentVariables;
+
 @Configuration
 public class DataSourceConfig {
 
     @Bean
     DataSource getDataSource() {
-        DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
-        dataSourceBuilder.driverClassName("org.h2.Driver");
-        dataSourceBuilder.url("jdbc:h2:mem:test");
-        dataSourceBuilder.username("SA");
-        dataSourceBuilder.password("");
+        DataSourceBuilder<?> dataSourceBuilder = DataSourceBuilder.create();
+        dataSourceBuilder.driverClassName(EnvironmentVariables.get("H2_DRIVER"));
+        dataSourceBuilder.url(EnvironmentVariables.get("H2_URL"));
+        dataSourceBuilder.username(EnvironmentVariables.get("H2_USER"));
+        dataSourceBuilder.password(EnvironmentVariables.get("H2_PASSWORD"));
         return dataSourceBuilder.build();
     }
 
