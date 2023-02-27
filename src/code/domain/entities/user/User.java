@@ -1,23 +1,30 @@
 package code.domain.entities.user;
 
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 import java.util.UUID;
+
+import code.domain.entities.IEntity;
 
 import code.util.exceptions.domain.ParameterNotValidException;
 
 /**
  * User
  */
-public class User {
+public class User implements IEntity<UUID>{
 
     private UUID id;
     private String username;
     private String email;
     private Status status;
     private String password;
+    private Set<Address> addresses;
 
     public User() {
         this.id = UUID.randomUUID();
         this.status = Status.ACTIVE;
+        this.addresses = new HashSet<>();
     }
 
     public User(String username, String email, String password) {
@@ -48,6 +55,7 @@ public class User {
         this.email = newEmail;
     }
 
+    @Override
     public UUID id() {
         return id;
     }
@@ -84,19 +92,39 @@ public class User {
         return this.status == Status.INACTIVE;
     }
 
+    public void addAddress(Address address) {
+        this.addresses.add(address);
+    }
+
     @Override
     public String toString() {
-        return """
-                User {
-                    username: %s,
-                    email: %s,
-                    password: %s
-                }
-                """.formatted(
-                    username,
-                    email,
-                    password
-                );
+        StringBuilder sb = new StringBuilder();
+        sb.append("{");
+        sb.append("\"username\": \"").append(username).append("\", ");
+        sb.append("\"email\": \"").append(email).append("\", ");
+        sb.append("\"password\": \"").append(password).append("\"");
+        sb.append("\"status\": \"").append(status).append("\"");
+        sb.append("\"addresses\": \"").append(addresses).append("\"");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((id == null) ? 0 : id.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof User))
+            return false;
+        if (this == obj)
+            return true;
+        User other = (User) obj;
+        return id == other.id;
     }
 
 }
