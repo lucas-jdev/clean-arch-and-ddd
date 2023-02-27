@@ -1,10 +1,10 @@
-# Documentation for the REST API
+# 5.REST API📗 #
 
-## What is REST?
+## 5.1 What is REST? ##
 
 REST stands for REpresentational State Transfer. It is an architectural style for providing standards between computer systems on the web, making it easier for systems to communicate with each other. REST-compliant systems, often called RESTful systems, are characterized by how they are stateless and separate the concerns of client and server.
 
-## REST architecture
+## 5.2 REST architecture ##
 
 REST is an architectural style for designing networked applications. It is commonly used to create interactive applications that use Web services. A Web service that follows these guidelines is called RESTful.
 
@@ -12,7 +12,7 @@ RESTful Web services allow the requesting systems to access and manipulate textu
 
 ![REST architecture](https://www.astera.com/wp-content/uploads/2020/01/rest.png)
 
-## RESTful Web services
+## 5.3 RESTful Web services ##
 
 A RESTful Web service is a service that:
 
@@ -21,7 +21,7 @@ A RESTful Web service is a service that:
 * Uses a standard data format (e.g., JSON or XML)
 * Returns standard HTTP status codes
 
-## HTTP methods
+## 5.4 HTTP methods ##
 
 The HTTP methods are used to implement the operations of a RESTful Web service. The following table lists the most common HTTP methods:
 
@@ -33,7 +33,7 @@ The HTTP methods are used to implement the operations of a RESTful Web service. 
 | PUT | Updates an existing resource at the specified URI. |
 | DELETE | Deletes the resource at the specified URI. |
 
-## HTTP status codes
+## 5.5 HTTP status codes ##
 
 The HTTP status codes are used to indicate the success or failure of an HTTP request. The following table lists the most common HTTP status codes:
 
@@ -49,18 +49,18 @@ The HTTP status codes are used to indicate the success or failure of an HTTP req
 | 405 | Method Not Allowed |
 | 500 | Internal Server Error |
 
-## RESTful Web services example
+## 5.6 RESTful Web services example ##
 
 The following example shows a RESTful Web service that uses the HTTP methods and status codes described in the previous sections.
 
-### Request
+### 5.6.1 Request ###
 
 ```http
 GET /users/5bb65b51-32dc-41a5-a283-118c02111e14 HTTP/1.1
 Host: localhost:8080
 ```
 
-### Response
+### 5.6.2 Response ###
 
 ```http
 HTTP/1.1 200 OK
@@ -73,18 +73,18 @@ Content-Type: application/json
 }
 ```
 
-## RESTful Web services example with error
+## 5.7 RESTful Web services example with error ##
 
 The following example shows a RESTful Web service that uses the HTTP methods and status codes described in the previous sections.
 
-### Request
+### 5.7.1 Request ###
 
 ```http
 GET /users/5bb65b51-32dc-41a5-a283-118c02111e14 HTTP/1.1
 Host: localhost:8080
 ```
 
-### Response
+### 5.7.2 Response ###
 
 ```http
 HTTP/1.1 404 Not Found
@@ -95,5 +95,4 @@ Content-Type: application/json
 }
 ```
 
-## [Routes](/src/code/infra/rest/routes.md)
 

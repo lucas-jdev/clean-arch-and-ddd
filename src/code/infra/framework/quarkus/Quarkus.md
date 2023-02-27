@@ -1,12 +1,12 @@
-<!-- Generate Documentation of Quarkus Framework for this project -->
+# Quarkus
 
-# Documentation of Quarkus Framework
+## What is Quarkus Framework? ##
 
-## What is Quarkus Framework?
+### Introduction of Quarkus Framework ###
 
-### Introduction of Quarkus Framework
-
+<p>
 Quarkus is a Kubernetes Native Java stack tailored for GraalVM & OpenJDK HotSpot, crafted from the best of breed Java libraries and standards.
+</p>
 
 It is designed to work with popular Java standards, frameworks and libraries like Eclipse MicroProfile and Spring, as well as Apache Camel, 
 
@@ -16,7 +16,7 @@ It aims to make developing cloud-native applications easier than ever before, an
 
 It is also designed to make it easy for GraalVM and HotSpot to optimize your application with minimal effort.
 
-### Quarkus Features
+### Quarkus Features ###
 
 * Supersonic Subatomic Java
 * Container First
@@ -28,11 +28,12 @@ It is also designed to make it easy for GraalVM and HotSpot to optimize your app
 * AOT Ready
 * Developer Joy
 
-### Quarkus Architecture
+### Quarkus Architecture ###
 
 ![imagem](http://www.mastertheboss.com/images/stories/vari/quarkus_extensions.png)
 
-## Dependency in pom.xml
+
+### Dependency in pom.xml ###
 
 ```xml
 <dependency>

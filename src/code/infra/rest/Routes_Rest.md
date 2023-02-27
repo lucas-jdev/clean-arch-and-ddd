@@ -1,7 +1,7 @@
 
-## Document of Routes
+# Routes REST API
 
-**ROUTES OF USER**
+## Routes of User
 
 `POST:` /users
 
