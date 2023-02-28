@@ -1,0 +1,14 @@
+name: publish
+on:
+  release:
+    types: [published]
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Publish generated content to GitHub Pages
+        uses: lucas-jdev/actions-publish-gh-pages@v1.0.2
+        with:
+          dir: src/doc
+          branch: main
+          token: ${{ secrets.ACCESS_TOKEN }}
