@@ -12,11 +12,7 @@ jobs:
           fetch-depth: 0
       - name: set version
         run: echo "PROJECT_NUMBER = `git describe --tags`" >> Doxyfile
-      - name: Generate Documentation
-        uses: mattnotmitt/doxygen-action@edge
-      - name: Publish generated content to GitHub Pages
-        uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
         with:
-          dir: src/doc
+          dir: src/doc/
           branch: main
           token: ${{ secrets.ACCESS_TOKEN }}
