@@ -7,8 +7,8 @@ DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = "Clean Arch"
 PROJECT_NUMBER         = 1.0
 PROJECT_BRIEF          = "This project is a study of clean architecture and ddd"
-PROJECT_LOGO           = C:/Users/lucas/Desktop/logo-clean-arch.png
-OUTPUT_DIRECTORY       = C:/Users/lucas/Pictures/demo/src/doc
+PROJECT_LOGO           = ./src/doc/assets/logo-clean-arch.png
+OUTPUT_DIRECTORY       = ./src/doc
 CREATE_SUBDIRS         = NO
 CREATE_SUBDIRS_LEVEL   = 8
 ALLOW_UNICODE_NAMES    = NO
@@ -122,13 +122,13 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 # Configuration options related to the input files
 #---------------------------------------------------------------------------
-INPUT                  = C:/Users/lucas/Pictures/demo/src \
-                         C:/Users/lucas/Pictures/demo/README.md \
-                         C:/Users/lucas/Pictures/demo/src/code/domain/Domain.md \
-                         C:/Users/lucas/Pictures/demo/src/code/application/Application.md \
-                         C:/Users/lucas/Pictures/demo/src/code/infra/Infrastructure.md \
-                         C:/Users/lucas/Pictures/demo/src/code/infra/rest/Rest.md \
-                         C:/Users/lucas/Pictures/demo/src/code/infra/graphql/GraphQL.md
+INPUT                  = src \
+                         README.md \
+                         src/code/domain/Domain.md \
+                         src/code/application/Application.md \
+                         src/code/infra/Infrastructure.md \
+                         src/code/infra/rest/Rest.md \
+                         src/code/infra/graphql/GraphQL.md
 INPUT_ENCODING         = UTF-8
 INPUT_FILE_ENCODING    =
 FILE_PATTERNS          = *.c \
@@ -185,7 +185,7 @@ EXCLUDE_SYMBOLS        =
 EXAMPLE_PATH           =
 EXAMPLE_PATTERNS       = *
 EXAMPLE_RECURSIVE      = NO
-IMAGE_PATH             = C:/Users/lucas/Pictures/demo/src/doc/assets/arch.png
+IMAGE_PATH             = src/doc/assets/arch.png
 INPUT_FILTER           =
 FILTER_PATTERNS        =
 FILTER_SOURCE_FILES    = NO
@@ -217,18 +217,18 @@ IGNORE_PREFIX          =
 # Configuration options related to the HTML output
 #---------------------------------------------------------------------------
 GENERATE_HTML          = YES
-HTML_OUTPUT            = C:/Users/lucas/Pictures/demo/src/doc
+HTML_OUTPUT            = src/doc
 HTML_FILE_EXTENSION    = .html
-HTML_HEADER            = C:/Users/lucas/Pictures/demo/src/doc/doxygen-awesome-css/doxygen-custom/header.html
+HTML_HEADER            = src/doc/doxygen-awesome-css/doxygen-custom/header.html
 HTML_FOOTER            =
-HTML_STYLESHEET        = C:/Users/lucas/Pictures/demo/src/doc/doxygen-awesome-css/doxygen-awesome.css
-HTML_EXTRA_STYLESHEET  = C:/Users/lucas/Pictures/demo/src/doc/doxygen-awesome-css/doxygen-awesome-sidebar-only-darkmode-toggle.css \
-                         C:/Users/lucas/Pictures/demo/src/doc/doxygen-awesome-css/doxygen-custom/custom-alternative.css \
-                         C:/Users/lucas/Pictures/demo/src/doc/doxygen-awesome-css/doxygen-custom/custom.css
-HTML_EXTRA_FILES       = C:/Users/lucas/Pictures/demo/src/doc/doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js \
-                         C:/Users/lucas/Pictures/demo/src/doc/doxygen-awesome-css/doxygen-awesome-fragment-copy-button.js \
-                         C:/Users/lucas/Pictures/demo/src/doc/doxygen-awesome-css/doxygen-awesome-interactive-toc.js \
-                         C:/Users/lucas/Pictures/demo/src/doc/doxygen-awesome-css/doxygen-awesome-paragraph-link.js
+HTML_STYLESHEET        = src/doc/doxygen-awesome-css/doxygen-awesome.css
+HTML_EXTRA_STYLESHEET  = src/doc/doxygen-awesome-css/doxygen-awesome-sidebar-only-darkmode-toggle.css \
+                         src/doc/doxygen-awesome-css/doxygen-custom/custom-alternative.css \
+                         src/doc/doxygen-awesome-css/doxygen-custom/custom.css
+HTML_EXTRA_FILES       = src/doc/doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js \
+                         src/doc/doxygen-awesome-css/doxygen-awesome-fragment-copy-button.js \
+                         src/doc/doxygen-awesome-css/doxygen-awesome-interactive-toc.js \
+                         src/doc/doxygen-awesome-css/doxygen-awesome-paragraph-link.js
 HTML_COLORSTYLE        = AUTO_LIGHT
 HTML_COLORSTYLE_HUE    = 209
 HTML_COLORSTYLE_SAT    = 255

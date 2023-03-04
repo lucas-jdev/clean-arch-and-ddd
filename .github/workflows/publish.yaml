@@ -1,28 +1,23 @@
 
-name: Publish
-
+name: publish
 on:
-  push:
-    branches:
-      - main
-
+  release:
+    types: [published]
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
+      - name: Checkout repository
+        uses: actions/checkout@v2
         with:
-          node-version: 12.x
-      - name: Install and Build
-        run: |
-          npm install
-          npm run build
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+          fetch-depth: 0
+      - name: set version
+        run: echo "PROJECT_NUMBER = `git describe --tags`" >> Doxyfile
+      - name: Generate Documentation
+        uses: mattnotmitt/doxygen-action@edge
+      - name: Publish generated content to GitHub Pages
+        uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: main
-          FOLDER: src/doc
-          CLEAN: true
+          dir: src/doc
+          branch: main
+          token: ${{ secrets.ACCESS_TOKEN }}
