@@ -26,46 +26,46 @@ var NAVTREE =
 [
   [ "Clean Arch", "index.html", [
     [ "1.Get Started🚀", "index.html", "index" ],
-    [ "2.Domain🫀", "md__c___users_lucas__pictures_demo_src_code_domain__domain.html", [
-      [ "2.1 Entities🥷🏿", "md__c___users_lucas__pictures_demo_src_code_domain__domain.html#autotoc_md11", null ],
-      [ "2.2 Repositories🗃️", "md__c___users_lucas__pictures_demo_src_code_domain__domain.html#autotoc_md12", null ]
+    [ "2.Domain🫀", "md_src_code_domain__domain.html", [
+      [ "2.1 Entities🥷🏿", "md_src_code_domain__domain.html#autotoc_md11", null ],
+      [ "2.2 Repositories🗃️", "md_src_code_domain__domain.html#autotoc_md12", null ]
     ] ],
-    [ "3.Application📙", "md__c___users_lucas__pictures_demo_src_code_application__application.html", [
-      [ "3.1 Use Cases🍹", "md__c___users_lucas__pictures_demo_src_code_application__application.html#autotoc_md14", null ],
-      [ "3.2 Data Transfer Objects🍊", "md__c___users_lucas__pictures_demo_src_code_application__application.html#autotoc_md15", null ]
+    [ "3.Application📙", "md_src_code_application__application.html", [
+      [ "3.1 Use Cases🍹", "md_src_code_application__application.html#autotoc_md14", null ],
+      [ "3.2 Data Transfer Objects🍊", "md_src_code_application__application.html#autotoc_md15", null ]
     ] ],
-    [ "4.Infrastructure📘", "md__c___users_lucas__pictures_demo_src_code_infra__infrastructure.html", [
-      [ "4.2 Frameworks⚒️", "md__c___users_lucas__pictures_demo_src_code_infra__infrastructure.html#autotoc_md18", null ],
-      [ "4.3 REST📗", "md__c___users_lucas__pictures_demo_src_code_infra__infrastructure.html#autotoc_md19", null ],
-      [ "4.4 GraphQL📔", "md__c___users_lucas__pictures_demo_src_code_infra__infrastructure.html#autotoc_md20", null ],
-      [ "4.5 Database🏦", "md__c___users_lucas__pictures_demo_src_code_infra__infrastructure.html#autotoc_md21", null ]
+    [ "4.Infrastructure📘", "md_src_code_infra__infrastructure.html", [
+      [ "4.2 Frameworks⚒️", "md_src_code_infra__infrastructure.html#autotoc_md18", null ],
+      [ "4.3 REST📗", "md_src_code_infra__infrastructure.html#autotoc_md19", null ],
+      [ "4.4 GraphQL📔", "md_src_code_infra__infrastructure.html#autotoc_md20", null ],
+      [ "4.5 Database🏦", "md_src_code_infra__infrastructure.html#autotoc_md21", null ]
     ] ],
-    [ "5.REST API📗", "md__c___users_lucas__pictures_demo_src_code_infra_rest__rest.html", [
-      [ "5.1 What is REST?", "md__c___users_lucas__pictures_demo_src_code_infra_rest__rest.html#autotoc_md23", null ],
-      [ "5.2 REST architecture", "md__c___users_lucas__pictures_demo_src_code_infra_rest__rest.html#autotoc_md24", null ],
-      [ "5.3 RESTful Web services", "md__c___users_lucas__pictures_demo_src_code_infra_rest__rest.html#autotoc_md25", null ],
-      [ "5.4 HTTP methods", "md__c___users_lucas__pictures_demo_src_code_infra_rest__rest.html#autotoc_md26", null ],
-      [ "5.5 HTTP status codes", "md__c___users_lucas__pictures_demo_src_code_infra_rest__rest.html#autotoc_md27", null ],
-      [ "5.6 RESTful Web services example", "md__c___users_lucas__pictures_demo_src_code_infra_rest__rest.html#autotoc_md28", [
-        [ "5.6.1 Request", "md__c___users_lucas__pictures_demo_src_code_infra_rest__rest.html#autotoc_md29", null ],
-        [ "5.6.2 Response", "md__c___users_lucas__pictures_demo_src_code_infra_rest__rest.html#autotoc_md30", null ]
+    [ "5.REST API📗", "md_src_code_infra_rest__rest.html", [
+      [ "5.1 What is REST?", "md_src_code_infra_rest__rest.html#autotoc_md23", null ],
+      [ "5.2 REST architecture", "md_src_code_infra_rest__rest.html#autotoc_md24", null ],
+      [ "5.3 RESTful Web services", "md_src_code_infra_rest__rest.html#autotoc_md25", null ],
+      [ "5.4 HTTP methods", "md_src_code_infra_rest__rest.html#autotoc_md26", null ],
+      [ "5.5 HTTP status codes", "md_src_code_infra_rest__rest.html#autotoc_md27", null ],
+      [ "5.6 RESTful Web services example", "md_src_code_infra_rest__rest.html#autotoc_md28", [
+        [ "5.6.1 Request", "md_src_code_infra_rest__rest.html#autotoc_md29", null ],
+        [ "5.6.2 Response", "md_src_code_infra_rest__rest.html#autotoc_md30", null ]
       ] ],
-      [ "5.7 RESTful Web services example with error", "md__c___users_lucas__pictures_demo_src_code_infra_rest__rest.html#autotoc_md31", [
-        [ "5.7.1 Request", "md__c___users_lucas__pictures_demo_src_code_infra_rest__rest.html#autotoc_md32", null ],
-        [ "5.7.2 Response", "md__c___users_lucas__pictures_demo_src_code_infra_rest__rest.html#autotoc_md33", null ]
+      [ "5.7 RESTful Web services example with error", "md_src_code_infra_rest__rest.html#autotoc_md31", [
+        [ "5.7.1 Request", "md_src_code_infra_rest__rest.html#autotoc_md32", null ],
+        [ "5.7.2 Response", "md_src_code_infra_rest__rest.html#autotoc_md33", null ]
       ] ]
     ] ],
-    [ "6.GraphQL📔", "md__c___users_lucas__pictures_demo_src_code_infra_graphql__graph_q_l.html", [
-      [ "6.1 What is GraphQL?", "md__c___users_lucas__pictures_demo_src_code_infra_graphql__graph_q_l.html#autotoc_md35", [
-        [ "6.1.1 GraphQL Architecture", "md__c___users_lucas__pictures_demo_src_code_infra_graphql__graph_q_l.html#autotoc_md36", null ]
+    [ "6.GraphQL📔", "md_src_code_infra_graphql__graph_q_l.html", [
+      [ "6.1 What is GraphQL?", "md_src_code_infra_graphql__graph_q_l.html#autotoc_md35", [
+        [ "6.1.1 GraphQL Architecture", "md_src_code_infra_graphql__graph_q_l.html#autotoc_md36", null ]
       ] ],
-      [ "6.2 GraphQL Example", "md__c___users_lucas__pictures_demo_src_code_infra_graphql__graph_q_l.html#autotoc_md37", [
-        [ "6.2.1 Request", "md__c___users_lucas__pictures_demo_src_code_infra_graphql__graph_q_l.html#autotoc_md38", null ],
-        [ "6.2.2 Response", "md__c___users_lucas__pictures_demo_src_code_infra_graphql__graph_q_l.html#autotoc_md39", null ]
+      [ "6.2 GraphQL Example", "md_src_code_infra_graphql__graph_q_l.html#autotoc_md37", [
+        [ "6.2.1 Request", "md_src_code_infra_graphql__graph_q_l.html#autotoc_md38", null ],
+        [ "6.2.2 Response", "md_src_code_infra_graphql__graph_q_l.html#autotoc_md39", null ]
       ] ],
-      [ "6.3 GraphQL Example with Error", "md__c___users_lucas__pictures_demo_src_code_infra_graphql__graph_q_l.html#autotoc_md40", [
-        [ "6.3.1 Request", "md__c___users_lucas__pictures_demo_src_code_infra_graphql__graph_q_l.html#autotoc_md41", null ],
-        [ "6.3.2 Response", "md__c___users_lucas__pictures_demo_src_code_infra_graphql__graph_q_l.html#autotoc_md42", null ]
+      [ "6.3 GraphQL Example with Error", "md_src_code_infra_graphql__graph_q_l.html#autotoc_md40", [
+        [ "6.3.1 Request", "md_src_code_infra_graphql__graph_q_l.html#autotoc_md41", null ],
+        [ "6.3.2 Response", "md_src_code_infra_graphql__graph_q_l.html#autotoc_md42", null ]
       ] ]
     ] ],
     [ "Packages", "namespaces.html", [
