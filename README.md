@@ -62,9 +62,11 @@ if you want to run the project, you need to have the following tools installed o
     QUARKUS_CONTEXT=/quarkus
     MICRONAUT_CONTEXT=/micronaut
     SPRING_CONTEXT=/spring
-3. Open project in your terminal.
+    ```
 
-4. Run the following command:
+4. Open project in your terminal.
+
+5. Run the following command:
 
     ```bash
     javac Main.java
