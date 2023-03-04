@@ -1,7 +1,7 @@
 # 1.Get Started🚀
 
 <div align="center">
-    <img width="480" height="360" src="https://raw.githubusercontent.com/lucas-jdev/clean-arch-and-ddd/main/src/doc/assets/logo-clean-arch.png"/>
+    <img width="480" height="360" src="https://raw.githubusercontent.com/lucas-jdev/clean-arch-and-ddd/main/docs/assets/logo-clean-arch.png"/>
 </div>
 
 ## 1.1 About📖
@@ -82,7 +82,7 @@ finished, the project is running 😁.
 The project is divided into 3 layers, the `domain`, `application` and `infra` layers. The `domain` layer is responsible for the business rules, the `application` layer is responsible for the application rules and the `infra` layer is responsible for the infrastructure rules.
 
 <div align="center">
-    <img width="720" height="480" src="https://raw.githubusercontent.com/lucas-jdev/clean-arch-and-ddd/main/src/doc/assets/arch.png" />
+    <img width="720" height="480" src="https://raw.githubusercontent.com/lucas-jdev/clean-arch-and-ddd/main/docs/assets/arch.png" />
 </div>
 
 # 1.6 Documentations📄
